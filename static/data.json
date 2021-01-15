@@ -1,0 +1,9 @@
+{
+    "missions_list":
+    [
+        {"id_mission": "10001", "mission_title": "Save the planet", "information":"I need someone with superhero skills to save the planet", "candidate_list" : ["Mark LEVIS", "Paul ANTOINE", "Celine ARROW", "Diana BRUCE"]},
+        {"id_mission": "20001", "mission_title": "Plant a tree", "information":"Do someone know how to plant a tree ?", "candidate_list" : ["Joe GREEN", "Janna EDWARD", "Diana BRUCE"]},
+        {"id_mission": "10002", "mission_title": "Data Analysis", "information":"I've got a lot of data, please do magic with them.", "candidate_list" : ["Paul ANTOINE", "Jimmy PEPPER", "Celine ARROW", "Eva DATAZ"]},
+        {"id_mission": "30001", "mission_title": "Book printing", "information":"I ran out of ink and I need someone to print my book. Please.", "candidate_list" : ["Mark LEVIS", "Diana BRUCE", "Celine ARROW"]}
+    ]
+}
