@@ -31,5 +31,6 @@
         ".vscode{,/**}"
     ],
     "appService.defaultWebAppToDeploy": "/subscriptions/13a772d2-e695-42b7-af7c-c6da1ac393d9/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/longlist-api-v1",
-    "appService.deploySubpath": "."
+    "appService.deploySubpath": ".",
+    "python.pythonPath": "venv/bin/python"
 }
