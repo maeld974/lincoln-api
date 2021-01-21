@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, jsonify
 import json
 import os
 
@@ -61,23 +61,25 @@ def list_missions():
             if str(mission["id_consultant"]) == str(id_consultant):
                 missions_list.append(mission)
         if missions_list:
-            response = {
+            response = jsonify({
                 "success": True,
                 "missions": missions_list,
                 "message": f"List of mission for id_consultant = {id_consultant} successfuly returned"
-            }
+            })
         else:
-            response = {
+            response = jsonify({
                 "success": False,
                 "missions": None,
                 "message": f"No mission found for id_consultant = {id_consultant}"
-            }
+            })
     else:
-        response = {
+        response = jsonify({
                 "success": True,
                 "missions": data["missions"],
                 "message": "List of all missions successfuly returned"
-            }
+            })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Methods', '*')
     return response
 
 
@@ -86,29 +88,29 @@ def get_candidates():
     id_mission = request.args.get('id_mission')
     if id_mission:
         if id_mission == "10000":
-            response = {
+            response = jsonify({
                 "success": True,
                 "id_mission": "10000",
                 "candidates": candidates_list["candidates"],
                 "message": f"List of candidates for id_mission = {id_mission} successfuly returned"
-            }
-            return response
+            })
         else:
-            response = {
+            response = jsonify({
                 "success": False,
                 "id_mission": None,
                 "candidates": None,
                 "message": f"No mission found for id_mission = {id_mission}"
-            }
-            return response
+            })
     else:
-        response = {
+        response = jsonify({
                 "success": False,
                 "id_mission": None,
                 "candidates": None,
                 "message": f"Please indicate an id_mission"
-            }
-        return response
+            })
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Methods', '*')
+    return response
 
 
 if __name__ == '__main__':
