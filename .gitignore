@@ -1,2 +1,6 @@
-# Project exclude paths
 /venv/
+test.py
+/__pycache__/
+.DS_Store
+.vscode/settings.json
+static/key.json
